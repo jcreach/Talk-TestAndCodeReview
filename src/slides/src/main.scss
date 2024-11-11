@@ -1,0 +1,41 @@
+.speaker-preview {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    .speaker {
+        width: 20vw;
+        .speaker-avatar {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        
+        .speaker-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .speaker-name {
+                font-size: 3rem;
+            }
+
+            .speaker-role {
+                font-size: 1.8rem;
+                font-style: italic;
+            }
+
+            .speaker-compagny {
+                max-height: 55px;
+                img {
+                    height: 50px;
+                    margin: unset;
+                }
+            }
+
+            .speaker-city {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
