@@ -27,6 +27,11 @@
 
             .speaker-compagny {
                 max-height: 55px;
+                margin: {
+                    top: 15px;
+                    bottom: 15px;
+                }
+
                 img {
                     height: 50px;
                     margin: unset;
@@ -34,7 +39,7 @@
             }
 
             .speaker-city {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
         }
     }
