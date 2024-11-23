@@ -6,4 +6,4 @@ import Notes from '../node_modules/reveal.js/plugin/notes/notes.esm.js';
 let deck = new Reveal({
   plugins: [Markdown, Notes],
 });
-deck.initialize({ slideNumber: true, controls: false });
+deck.initialize({ slideNumber: true, controls: true });
