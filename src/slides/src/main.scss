@@ -45,6 +45,38 @@
     }
 }
 
+.quick-summary-preview-container {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+
+    .quick-summary-preview {
+        width: 25vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            max-width: 300px;
+        }
+    }
+
+    .start {
+        height: 35vh;
+        width: 20vw;
+    }
+
+    .middle {
+        width: 20vw;
+    }
+
+    .end {
+        img {
+            max-width: 250px;
+        }
+    }
+}
 
 // Overide global style
 :root {
