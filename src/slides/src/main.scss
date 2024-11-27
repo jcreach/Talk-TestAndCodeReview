@@ -4,6 +4,14 @@
     background-position: left 50px bottom 50px;
 }
 
+div .disclamer {
+    font-style: italic;
+
+    span {
+        text-decoration-line: underline;
+    }
+}
+
 .speaker-preview {
     display: flex;
     flex-direction: row;
