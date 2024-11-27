@@ -10,7 +10,8 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown="assets/md/tittle.md">
+        <section data-markdown="assets/md/tittle.md"
+        data-separator-notes="^Note:">
         </section>
         <section data-auto-animate>
           <h3>Qui sommes nous ?</h3>
@@ -42,7 +43,22 @@
             </div>
           </div>
         </section>
-        <section data-markdown="assets/md/roleplay.md">
+        <section>
+          <h3>Mise en situation</h3>
+          <div class="disclamer fragment">
+            <p>
+              <span>Disclaimer :</span> Cette mis en situation est imaginaire.<br />
+              Les personnes et les événements figurant dans cette série sont purement ficitfs.
+              <span class="fragment" >ou presque ...</span>
+            </p>
+          </div>
+          <aside class="notes" data-markdown>
+            <textarea data-template>
+              Afin de poser le contexte de notre présentation, nous souhaitions vous proposer une petite mise en situation.
+
+              Avant de passer à celle ci, merci de prendre connaissance de ce disclaimer :
+            </textarea>
+          </aside>
         </section>
         <section data-visibility="hidden" data-markdown="assets/md/organisational-solutions.md">
         </section>
@@ -51,8 +67,11 @@
         <section>
           <section>
             <h3>Comment optimiser le process de code review ..?</h3>
-            <aside class="notes">
-              Aujourd'hui ce qu'on aimerait vous présenter c'est le cheminement qui nous permet actuellement de proposer un ensemble de solutions et d'outils pour optimiser nos code review sur nos projets client / interne ou bien personnels ...
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                La situtatio
+                Aujourd'hui ce qu'on aimerait vous présenter c'est le cheminement qui nous permet actuellement de proposer un ensemble de solutions et d'outils pour optimiser nos code review sur nos projets client / interne ou bien personnels ...
+              </textarea>
             </aside>
           </section>
           <section data-auto-animate>
@@ -112,12 +131,19 @@
             <ul>
               <li class="fragment">Lisibilité du code</li>
               <li class="fragment">Conformité du code aux standards</li>
-              <li class="fragment">Pérénité du code dans le temps</li>
+              <li class="fragment">Pérénité du code et de l'architecture du projet dans le temps</li>
             </ul>
-
-            <aside class="notes">
-              Pour pouvoir en arriver là il faut travailler sur plusieurs axes (ici trois en l'occurence) : Permier axe, nous souhaitons optimiser nos codes review sans mettre à defaut la lisibilité du code.
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Pour remplirs nos objectifs on peut travailler sur : 
+                - La lisibilité du code, 
+                - La conformité du code aux standards
+                - La péréntité du projet dans le temps
+              </textarea>
             </aside>
+            <!-- <aside class="notes">
+              Pour pouvoir en arriver là il faut travailler sur plusieurs axes (ici trois en l'occurence) : Permier axe, nous souhaitons optimiser nos codes review sans mettre à defaut la lisibilité du code.
+            </aside> -->
           </section>
         </section>
         <section data-markdown="assets/md/unit-tests.md"
