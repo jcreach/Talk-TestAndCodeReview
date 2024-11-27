@@ -1,3 +1,9 @@
+.reveal .slide-background-content {
+    background-image: url("../assets/img/logo-apside.png");
+    background-size: 10%;
+    background-position: left 50px bottom 50px;
+}
+
 .speaker-preview {
     display: flex;
     flex-direction: row;
@@ -76,10 +82,6 @@
             max-width: 250px;
         }
     }
-}
-
-.tittle-up {
-
 }
 
 .citation{
