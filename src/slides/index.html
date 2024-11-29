@@ -13,35 +13,37 @@
         <section data-markdown="assets/md/tittle.md"
         data-separator-notes="^Note:">
         </section>
-        <section data-auto-animate>
-          <h3>Qui sommes nous ?</h3>
-        </section>
-        <section data-auto-animate>
-          <h3>Qui sommes nous ?</h3>
-          <div class="speaker-preview">
-            <div class="speaker">
-              <img class="speaker-avatar" src="./assets/img/jdcsc.jpg">
-              <div class="speaker-details">
-                <span class="speaker-name">Julien Creach</span>
-                <span class="speaker-role">Tech lead C# dotnet</span>
-                <div class="speaker-compagny">
-                  <img src="./assets/img/logo-apside.png">
+        <section>
+          <section data-auto-animate>
+            <h3>Qui sommes nous ?</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Qui sommes nous ?</h3>
+            <div class="speaker-preview">
+              <div class="speaker">
+                <img class="speaker-avatar" src="./assets/img/jdcsc.jpg">
+                <div class="speaker-details">
+                  <span class="speaker-name">Julien Creach</span>
+                  <span class="speaker-role">Tech lead C# dotnet</span>
+                  <div class="speaker-compagny">
+                    <img src="./assets/img/logo-apside.png">
+                  </div>
+                  <span class="speaker-city">🏙️ Rennes</span>
                 </div>
-                <span class="speaker-city">🏙️ Rennes</span>
+              </div>
+              <div class="speaker">
+                <img class="speaker-avatar" src="./assets/img/aru.jpg">
+                <div class="speaker-details">
+                  <span class="speaker-name">Alexandre Ruiz</span>
+                  <span class="speaker-role">Tech lead C# dotnet</span>
+                  <div class="speaker-compagny">
+                    <img src="./assets/img/logo-apside.png">
+                  </div>
+                  <span class="speaker-city">🏙️ Clermont-Ferrand</span>
+                </div>
               </div>
             </div>
-            <div class="speaker">
-              <img class="speaker-avatar" src="./assets/img/aru.jpg">
-              <div class="speaker-details">
-                <span class="speaker-name">Alexandre Ruiz</span>
-                <span class="speaker-role">Tech lead C# dotnet</span>
-                <div class="speaker-compagny">
-                  <img src="./assets/img/logo-apside.png">
-                </div>
-                <span class="speaker-city">🏙️ Clermont-Ferrand</span>
-              </div>
-            </div>
-          </div>
+          </section>
         </section>
         <section>
           <h3>Mise en situation</h3>
@@ -59,10 +61,6 @@
               Avant de passer à celle ci, merci de prendre connaissance de ce disclaimer :
             </textarea>
           </aside>
-        </section>
-        <section data-visibility="hidden" data-markdown="assets/md/organisational-solutions.md">
-        </section>
-        <section data-visibility="hidden" data-markdown="assets/md/technical-solutions.md">
         </section>
         <section>
           <section>
@@ -146,7 +144,57 @@
             </aside> -->
           </section>
         </section>
-        <section data-markdown="assets/md/unit-tests.md"
+        <section>
+          <section data-auto-animate>
+            <h3>Et si on utilisait des tests unitaires ?</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Et si on utilisait des tests unitaires ?</h3>
+            <div class="code-with-class">
+              <img class="uml" src="./assets/img/DummyProject-cd-ResultClass.svg">
+              <img class="code" src="./assets/img/unitTest-classic.png">
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                - Je sais pas vous mais moi quand on me parle de test unitaire je pense à quelque chose comme ça.
+                
+                La c'est un test tout simple qui vient controler une méthode d'une classe.. Comme ici la classe **Result** qui est une classe générique servant à normer les retours produits par mes services.
+                Et la quand on voit cet exemple je me dis **ok** les TU je sais faire, (dans le meilleur des mondes il y en a déjà), c'est pratique, mais je vois pas comment on va garantir la pérénité de notre architecture avec ça...
+
+                - Pour y voir un peu plus clair il faut revenir aux bases. 
+                
+                Est ce que vous avez les bases ? Oui ? non ? 
+              
+                Ok instant litérature :
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <div class="citation">
+              <p>
+                En programmation informatique, le test unitaire [...] 
+                est une procédure permettant de vérifier le bon fonctionnement
+                d'une partie précise d'un logiciel ou d'une portion d'un programme 
+                (appelée « unité » ou « module »).
+              </p>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="citation">
+              <p>
+                En programmation informatique, le test unitaire [...] 
+                est une procédure permettant de vérifier le bon fonctionnement
+                d'une <span class="text-highlight">partie précise d'un logiciel</span>ou d'une portion d'un programme 
+                (appelée « unité » ou « module »).
+              </p>
+            </div>
+          </section>
+          <section>
+            a
+          </section>
+        </section>
+        <section data-visibility="hidden" data-markdown="assets/md/unit-tests.md"
         data-separator="---"
         data-separator-vertical="===">
         </section>

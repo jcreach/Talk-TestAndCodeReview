@@ -17,7 +17,7 @@ public class Result<T>
         Value = value;
     }
     
-    public bool IsSuccess { get; }
+    private bool IsSuccess { get; }
     public T Value { get; }
     
     public bool IsFailure => !IsSuccess;

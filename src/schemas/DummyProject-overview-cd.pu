@@ -1,0 +1,12 @@
+@startuml
+skinparam packageStyle rectangle
+Common -up-> Api
+Common -right-> Bll
+Bll -up-> Api
+Bll <-down- Dal
+
+package Api {}
+package Bll {}
+package Dal {}
+package Common {}
+@enduml

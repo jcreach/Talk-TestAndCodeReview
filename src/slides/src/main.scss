@@ -1,6 +1,6 @@
 .reveal .slide-background-content {
     background-image: url("../assets/img/logo-apside.png");
-    background-size: 10%;
+    background-size: 5%;
     background-position: left 50px bottom 50px;
 }
 
@@ -9,6 +9,47 @@ div .disclamer {
 
     span {
         text-decoration-line: underline;
+    }
+}
+
+.code-with-class {
+    display: flex;
+    gap: 10px;
+    max-width: 80vw;
+    width: auto;
+    overflow:auto;
+
+    .uml {
+        max-width: 300px;
+        width: auto;
+        height: auto;
+    }
+
+    .code {
+        max-width: 600px;
+        width: auto;
+        height: auto;
+    }
+}
+
+div .citation {
+    color: var(--r-link-color);
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+
+    background-image: url("../assets/img/logo-wikipedia.png");
+    background-size: 5%;
+    background-position: right 5px bottom 0px;
+    background-repeat: no-repeat; 
+}
+.text-highlight {
+    border: 5px solid var(--r-heading-color);
+    border-radius: 8px;
+    padding: {
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
     }
 }
 
@@ -90,12 +131,6 @@ div .disclamer {
             max-width: 250px;
         }
     }
-}
-
-.citation{
-    font-style: italic;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
 }
 
 // Overide global style
