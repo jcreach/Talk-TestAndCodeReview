@@ -8,19 +8,20 @@ div .disclamer {
     font-style: italic;
 
     span {
+        color: var(--r-heading-color);
         text-decoration-line: underline;
     }
 }
 
 .code-with-class {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     max-width: 80vw;
     width: auto;
     overflow:auto;
 
     .uml {
-        max-width: 300px;
+        max-width: 350px;
         width: auto;
         height: auto;
     }
@@ -33,7 +34,6 @@ div .disclamer {
 }
 
 div .citation {
-    color: var(--r-link-color);
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -139,4 +139,5 @@ div .citation {
     --r-main-color: #787878;
     --r-heading-color: #e79759;
     --r-link-color: #153650;
+    --r-main-color: #153650;
 }
