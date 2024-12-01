@@ -1,4 +1,5 @@
 @startuml
+title DummyProject.Common
 class Result<T> {
     __ Public properties __
     +bool IsSuccess
