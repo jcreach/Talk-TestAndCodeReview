@@ -28,6 +28,20 @@ package Common {
 }
 @enduml
 
+@startuml
+skinparam packageStyle rectangle
+title DummyProject
+Common -up-> Api
+Common -right-> Bll
+Common --> Dal
+Bll -up-> Api
+Bll <-down- Dal
+
+package Api {}
+package Bll {}
+package Dal {}
+package Common #palegreen {}
+@enduml
 
 @startuml
 skinparam packageStyle rectangle
