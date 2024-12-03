@@ -67,7 +67,7 @@
             <h3>Comment optimiser le process de code review ..?</h3>
             <aside class="notes" data-markdown>
               <textarea data-template>
-                La situtatio
+                La situtation
                 Aujourd'hui ce qu'on aimerait vous présenter c'est le cheminement qui nous permet actuellement de proposer un ensemble de solutions et d'outils pour optimiser nos code review sur nos projets client / interne ou bien personnels ...
               </textarea>
             </aside>
@@ -187,21 +187,65 @@
                 (appelée « unité » ou « module »).
               </p>
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Voici une définition :
+
+                *Lire définition* 
+                Merci wikipédia pour cette définiton :D 
+
+                L'information importante à retenir ici est "une partie précise d'un logiciel" dans notre exemple la partie en question est :
+              </textarea>
+            </aside>
           </section>
           <section>
-            <div class="r-stack">
-              <img src="./assets/img/DummyProject-overview-cd-1.svg" alt="" class="fragment fade-out" data-fragment-index="0">
-              <img src="./assets/img/DummyProject-overview-cd-2.svg" alt="" class="fragment current-visible" data-fragment-index="0">
+            <div class="img-evolution">
+              <img src="./assets/img/DummyProject-overview-cd-1.svg" alt="" class="fragment" data-fragment-index="0">
+              <img src="./assets/img/right-arrow.png" alt="" class="arrow fragment" data-fragment-index="1">
+              <img src="./assets/img/DummyProject-overview-cd-2.svg" alt="" class="fragment" data-fragment-index="1">
+              <img src="./assets/img/right-arrow.png" alt="" class="arrow fragment" data-fragment-index="2">
+              <img src="./assets/img/DummyProject-overview-cd-3.svg" alt="" class="fragment" data-fragment-index="2">
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                La classe générique Résult dans la brique common.
+
+                Mais est-ce que ça ne pourrait pas être le projet Common ? Ou alors toutes les briques de notre projet ?
+
+                Et si la partie de notre logiciel à tester n'était plus du code mais l'architecture de notre projet.
+              </textarea>
+            </aside>
+          </section>
+          <section>
+            <h3>Comment tester l'architecture de notre code ?</h3>
+            <div class="ut-conditions">
+              <img class="ut-schema" src="./assets/img/DummyProject-overview-cd-3.svg" alt="">
+              <div>
+                <p class="underline">Conditions :</p>
+                <ul>
+                  <li class="fragment">
+                    Un langage permettant la réflexion
+                    <div class="logos">
+                      <img src="./assets/img/logo-csharp.png">
+                      <img src="./assets/img/logo-dotnet.svg">
+                    </div>
+                  </li>
+                  <li class="fragment">
+                    Une librairie permettant d'abstraire la partie réflexion
+                    <div class="logos">
+                      <img src="./assets/img/logo-ArchUnitNET.png">
+                    </div>
+                  </li>
+                  <li class="fragment">Une bonne connaisance de l'architecture du projet</li>
+                </ul>
+              </div>
             </div>
           </section>
-        </section>
-        <section data-visibility="hidden" data-markdown="assets/md/unit-tests.md"
-        data-separator="---"
-        data-separator-vertical="===">
         </section>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
-potential solutions

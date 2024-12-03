@@ -133,6 +133,47 @@ div .citation {
     }
 }
 
+.img-evolution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .arrow {
+        max-width: 50px !important;
+        max-height: 50px !important;
+        width: auto;
+        height: auto;
+    }
+}
+
+
+.ut-conditions {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    .ut-schema {
+        max-width: 200px;
+        max-height: 250px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.logos {
+    display: flex;
+
+    img {
+        max-width: 150px;
+        max-height: 50px;
+        width: auto;
+        height: auto;
+    }
+}
+
 // Overide global style
 :root {
     --r-background-color: #f0f0ef;
@@ -140,4 +181,5 @@ div .citation {
     --r-heading-color: #e79759;
     --r-link-color: #153650;
     --r-main-color: #153650;
+    --dynamic-content: "Texte par défaut";
 }
