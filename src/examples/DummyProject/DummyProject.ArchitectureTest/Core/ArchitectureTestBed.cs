@@ -28,7 +28,7 @@ public abstract class ArchitectureTestBed : BaseTest
         .That()
         .ResideInAssembly(BllAssembly)
         .As("Bll layer");
-    
+
     protected readonly IObjectProvider<IType> DalLayer = Types()
         .That()
         .ResideInAssembly(DalAssembly)

@@ -1,7 +1,4 @@
-using ArchUnitNET.xUnit;
 using DummyProject.ArchitectureTest.Core;
-using Microsoft.AspNetCore.Mvc;
-using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
 namespace DummyProject.ArchitectureTest.Api;
 

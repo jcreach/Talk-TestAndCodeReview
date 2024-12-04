@@ -12,7 +12,7 @@ public abstract class BaseTest
     protected static readonly Assembly BllAssembly = typeof(IDummyService).Assembly;
     protected static readonly Assembly DalAssembly = typeof(IDummyRepository).Assembly;
     protected static readonly Assembly CommonAssembly = typeof(Error).Assembly;
-    
+
     protected const string ApiAssemblyName = "DummyProject.Api";
     protected const string BllAssemblyName = "DummyProject.Bll";
     protected const string DalAssemblyName = "DummyProject.Dall";
