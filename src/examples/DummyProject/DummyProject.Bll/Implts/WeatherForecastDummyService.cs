@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DummyProject.Bll.Implts;
 
-public sealed class WeatherForecastDummyService(ILogger<WeatherForecastDummyService> logger) : IDummyServices
+public sealed class WeatherForecastDummyService(ILogger<WeatherForecastDummyService> logger) : IDummyService
 {
     private readonly ILogger _logger = logger;
 

@@ -14,11 +14,16 @@ public abstract class ArchitectureTestBed : BaseTest
             CommonAssembly
         ).Build();
 
+    protected readonly IObjectProvider<IType> CommonLayer = Types()
+        .That()
+        .ResideInAssembly(CommonAssembly)
+        .As("Common layer");
+
     protected readonly IObjectProvider<IType> ApiLayer = Types()
         .That()
         .ResideInAssembly(ApiAssembly)
         .As("Api layer");
-    
+
     protected readonly IObjectProvider<IType> BllLayer = Types()
         .That()
         .ResideInAssembly(BllAssembly)
@@ -28,9 +33,4 @@ public abstract class ArchitectureTestBed : BaseTest
         .That()
         .ResideInAssembly(DalAssembly)
         .As("Dal layer");
-    
-    protected readonly IObjectProvider<IType> CommonLayer = Types()
-        .That()
-        .ResideInAssembly(CommonAssembly)
-        .As("Common layer");
 }

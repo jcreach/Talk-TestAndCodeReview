@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DummyProject.Bll;
 
-public interface IDummyServices
+public interface IDummyService
 {
     string Name { get; }
 }

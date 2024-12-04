@@ -12,7 +12,7 @@ public class BllTests : ArchitectureTestBed
     {
         Classes()
             .That()
-            .ImplementInterface(typeof(IDummyServices))
+            .ImplementInterface(typeof(IDummyService))
             .Should()
             .BeSealed()
             .Check(Architecture);
@@ -23,7 +23,7 @@ public class BllTests : ArchitectureTestBed
     {
         Classes()
             .That()
-            .ImplementInterface(typeof(IDummyServices))
+            .ImplementInterface(typeof(IDummyService))
             .Should()
             .HaveNameEndingWith("Service")
             .Check(Architecture);
