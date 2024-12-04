@@ -16,18 +16,15 @@ div .disclamer {
 .code-with-class {
     display: flex;
     justify-content: space-between;
-    max-width: 80vw;
-    width: auto;
-    overflow:auto;
 
     .uml {
-        max-width: 350px;
+        max-width: 20vw;
         width: auto;
         height: auto;
     }
 
     .code {
-        max-width: 600px;
+        max-width: 35vw;
         width: auto;
         height: auto;
     }
@@ -43,6 +40,7 @@ div .citation {
     background-position: right 5px bottom 0px;
     background-repeat: no-repeat; 
 }
+
 .text-highlight {
     border: 5px solid var(--r-heading-color);
     border-radius: 8px;
@@ -143,6 +141,17 @@ div .citation {
         width: auto;
         height: auto;
     }
+
+    .duo-img {
+        max-width: 25vw;
+        width: auto;
+    }
+    .before {
+        max-width: 20vw;
+    }
+    .after {
+        max-width: 35vw;
+    }
 }
 
 
@@ -156,6 +165,17 @@ div .citation {
         max-height: 250px;
         width: auto;
         height: auto;
+    }
+}
+
+.ut-archi-example {
+    p span {
+        color: var(--r-heading-color);
+    }
+
+    .solo-img {
+        max-width: 40vw;
+        width: auto;
     }
 }
 
@@ -181,5 +201,4 @@ div .citation {
     --r-heading-color: #e79759;
     --r-link-color: #153650;
     --r-main-color: #153650;
-    --dynamic-content: "Texte par défaut";
 }
