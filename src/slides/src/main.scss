@@ -135,7 +135,20 @@ div .citation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .arrow {
+
+    .img-evolution-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 35vh;
+        height: auto;
+
+        > .duo-img-vertical, .icon  {
+            margin: unset;
+        }
+    }
+
+    .icon {
         max-width: 50px !important;
         max-height: 50px !important;
         width: auto;
@@ -146,6 +159,18 @@ div .citation {
         max-width: 25vw;
         width: auto;
     }
+
+    .duo-img-vertical {
+        max-height: 15vw;
+        height: auto;
+        // margin: unset;
+    }
+
+    .trio-img {
+        max-width: 20vw;
+        width: auto;
+    }
+
     .before {
         max-width: 20vw;
     }

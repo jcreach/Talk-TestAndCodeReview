@@ -47,21 +47,23 @@
           </section>
         </section>
         <section>
-          <h3>Mise en situation</h3>
-          <div class="disclamer fragment">
-            <p>
-              <span>Disclaimer :</span> Cette mise en situation est imaginaire.<br />
-              Les personnes et les événements figurant dans cette présentation sont purement ficitfs.
-              <span class="fragment" >ou presque ...</span>
-            </p>
-          </div>
-          <aside class="notes" data-markdown>
-            <textarea data-template>
-              Afin de poser le contexte de notre présentation, nous souhaitions vous proposer une petite mise en situation.
-
-              Avant de passer à celle ci, merci de prendre connaissance de ce disclaimer :
-            </textarea>
-          </aside>
+          <section>
+            <h3>Mise en situation</h3>
+            <div class="disclamer fragment">
+              <p>
+                <span>Disclaimer :</span> Cette mise en situation est imaginaire.<br />
+                Les personnes et les événements figurant dans cette présentation sont purement ficitfs.
+                <span class="fragment" >ou presque ...</span>
+              </p>
+            </div>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Afin de poser le contexte de notre présentation, nous souhaitions vous proposer une petite mise en situation.
+  
+                Avant de passer à celle ci, merci de prendre connaissance de ce disclaimer :
+              </textarea>
+            </aside>
+          </section>
         </section>
         <section>
           <section>
@@ -150,7 +152,7 @@
             <h3>Et si on utilisait des tests unitaires ?</h3>
           </section>
           <section data-auto-animate>
-            <h3>Et si on utilisait des tests unitaires ?</h3>
+            <h4>Qu'est ce qu'un test unitaire ?</h4>
             <div class="code-with-class">
               <img class="uml" src="./assets/img/DummyProject-cd-ResultClass.svg" alt=""/>
               <img class="code" src="./assets/img/unitTest-classic.png" alt="Exemple d'un test unitaire"/>
@@ -172,6 +174,7 @@
             </aside>
           </section>
           <section>
+            <h4>Qu'est ce qu'un test unitaire ?</h4>
             <div class="citation r-stack">
               <p class="fragment fade-out"
               data-fragment-index="0">
@@ -201,11 +204,12 @@
             </aside>
           </section>
           <section>
+            <h4>Qu'est ce qu'une "partie précise d'un logiciel" ?</h4>
             <div class="img-evolution">
               <img src="./assets/img/DummyProject-overview-cd-1.svg" alt="diagramme de classe zoom in sur la classe Result" class="fragment" data-fragment-index="0">
-              <img src="./assets/img/right-arrow.png" alt="flèche droite" class="arrow fragment" data-fragment-index="1">
+              <img src="./assets/img/right-arrow.png" alt="flèche droite" class="icon fragment" data-fragment-index="1">
               <img src="./assets/img/DummyProject-overview-cd-2.svg" alt="diagramme de classe zoom out sur le projet Common" class="fragment" data-fragment-index="1">
-              <img src="./assets/img/right-arrow.png" alt="flèche droite" class="arrow fragment" data-fragment-index="2">
+              <img src="./assets/img/right-arrow.png" alt="flèche droite" class="icon fragment" data-fragment-index="2">
               <img src="./assets/img/DummyProject-overview-cd-3.svg" alt="diagramme de classe zoom out sur le projet global" class="fragment" data-fragment-index="2">
             </div>
 
@@ -220,7 +224,7 @@
             </aside>
           </section>
           <section>
-            <h3>Comment tester l'architecture de notre code ?</h3>
+            <h4>Comment tester l'architecture de notre code ?</h4>
             <div class="ut-conditions">
               <img class="ut-schema" src="./assets/img/DummyProject-overview-cd-3.svg" alt="">
               <div>
@@ -245,67 +249,82 @@
             </div>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer.png" class="solo-img" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
             </div>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <div class="img-evolution">
                 <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
-                <img src="./assets/img/right-arrow.png" class="arrow" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
                 <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
               </div>
             </div>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <div class="img-evolution">
                 <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
-                <img src="./assets/img/right-arrow.png" class="arrow" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
                 <img src="./assets/img/ArchitectureTestBed_Archi.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
               </div>
             </div>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <div class="img-evolution">
                 <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
-                <img src="./assets/img/right-arrow.png" class="arrow" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
                 <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
               </div>
             </div>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <div class="img-evolution">
                 <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
-                <img src="./assets/img/right-arrow.png" class="arrow" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
                 <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer_ApiLayer.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
               </div>
             </div>
           </section>
           <section data-auto-animate>
-            <h3>Cas 1 - dépendances entre couches</h3>
+            <h4>Cas 1 - dépendances entre couches</h4>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <div class="img-evolution">
                 <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer_ApiLayer_BaseTest.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
-                <img src="./assets/img/right-arrow.png" class="arrow" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
                 <img src="./assets/img/BaseTest.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h4>Cas 1 - dépendances entre couches</h4>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <div class="img-evolution">
+                <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer.png" class="duo-img" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/plus.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <div class="img-evolution-vertical">
+                  <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnBllLayer.png" class="duo-img-vertical" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                  <img src="./assets/img/plus.png" class="icon" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                  <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnDalLayer.png" class="duo-img-vertical" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                </div>
               </div>
             </div>
           </section>
