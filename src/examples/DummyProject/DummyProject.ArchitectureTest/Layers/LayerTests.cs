@@ -9,12 +9,15 @@ public class LayerTests : ArchitectureTestBed
     [Fact]
     public void CommonLayer_Should_NotHaveDependencyOnApiLayer()
     {
-        Types()
+        // Act
+        var result = Types()
             .That()
             .Are(CommonLayer)
             .Should()
-            .NotDependOnAny(ApiLayer)
-            .Check(Architecture);
+            .NotDependOnAny(ApiLayer);
+
+        // Assert
+        result.Check(Architecture);
     }
 
     [Fact]
