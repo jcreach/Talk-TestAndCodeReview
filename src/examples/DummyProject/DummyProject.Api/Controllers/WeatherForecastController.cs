@@ -16,13 +16,13 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
     private readonly ILogger<WeatherForecastController> _logger = logger;
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public IEnumerable<WeatherForecastEntity> Get()
     {
         return weatherForecastDummyService.GetWeatherForecast();
     }
 
     [HttpGet("{dayOfWeek}", Name = "GetWeatherForecastByDayOfWeek")]
-    public ActionResult<WeatherForecast> Get(DaysOfWeek dayOfWeek)
+    public ActionResult<WeatherForecastEntity> Get(DaysOfWeek dayOfWeek)
     {
         var dayForecast = weatherForecastDummyService.GetWeatherForecastByDayOfWeek(dayOfWeek);
 
@@ -33,7 +33,7 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
     }
     
     [HttpGet("legacy/{dayOfWeek:int}", Name = "GetWeatherForecastByDayOfWeekInt")]
-    public ActionResult<WeatherForecast> Get(int dayOfWeek)
+    public ActionResult<WeatherForecastEntity> Get(int dayOfWeek)
     {
         var dayForecast = weatherForecastDummyService.GetWeatherForecastByDayOfWeek((DaysOfWeek)dayOfWeek);
 

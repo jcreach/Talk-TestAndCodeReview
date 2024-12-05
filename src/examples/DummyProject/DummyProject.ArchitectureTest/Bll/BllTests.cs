@@ -1,3 +1,4 @@
+using ArchUnitNET.Fluent;
 using ArchUnitNET.xUnit;
 using DummyProject.ArchitectureTest.Core;
 using DummyProject.Bll;
@@ -12,7 +13,7 @@ public class BllTests : ArchitectureTestBed
     {
         Classes()
             .That()
-            .ImplementInterface(typeof(IDummyService))
+            .Are(ServicesClasses)
             .Should()
             .BeSealed()
             .Check(Architecture);
@@ -23,9 +24,20 @@ public class BllTests : ArchitectureTestBed
     {
         Classes()
             .That()
-            .ImplementInterface(typeof(IDummyService))
+            .Are(ServicesClasses)
             .Should()
             .HaveNameEndingWith("Service")
+            .Check(Architecture);
+    }
+
+    [Fact]
+    public void Services_Should_BeInCorrectLayer()
+    {
+        Classes()
+            .That()
+            .Are(ServicesClasses)
+            .Should()
+            .Be(BllLayer)
             .Check(Architecture);
     }
 }

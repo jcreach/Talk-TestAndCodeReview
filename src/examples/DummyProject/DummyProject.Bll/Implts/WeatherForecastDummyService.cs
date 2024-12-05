@@ -19,10 +19,10 @@ public sealed class WeatherForecastDummyService(ILogger<WeatherForecastDummyServ
 
     public string Name => "WeatherForecast";
 
-    public IEnumerable<WeatherForecast> GetWeatherForecast()
+    public IEnumerable<WeatherForecastEntity> GetWeatherForecast()
     {
         _logger.LogDebug("GetWeatherForecast used !");
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        return Enumerable.Range(1, 5).Select(index => new WeatherForecastEntity
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             TemperatureC = Random.Shared.Next(-20, 55),
@@ -30,7 +30,7 @@ public sealed class WeatherForecastDummyService(ILogger<WeatherForecastDummyServ
         });
     }
 
-    public Result<WeatherForecast> GetWeatherForecastByDayOfWeek(DaysOfWeek dayOfWeek)
+    public Result<WeatherForecastEntity> GetWeatherForecastByDayOfWeek(DaysOfWeek dayOfWeek)
     {
         int selectedDay = (int)dayOfWeek;
 
@@ -39,16 +39,16 @@ public sealed class WeatherForecastDummyService(ILogger<WeatherForecastDummyServ
         if (selectedDay < 0 || selectedDay >= _summaries.Length)
         {
             _logger.LogError("Selected day is out of range.");
-            return Result<WeatherForecast>.Failure(WeatherForecastErrors.OutOfWeekRange);
+            return Result<WeatherForecastEntity>.Failure(WeatherForecastErrors.OutOfWeekRange);
         }
 
-        var dayForecast = new WeatherForecast()
+        var dayForecast = new WeatherForecastEntity()
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(selectedDay)),
             TemperatureC = Random.Shared.Next(-20, 55),
             Summary = _summaries[selectedDay]
         };
 
-        return Result<WeatherForecast>.Success(dayForecast);
+        return Result<WeatherForecastEntity>.Success(dayForecast);
     }
 }

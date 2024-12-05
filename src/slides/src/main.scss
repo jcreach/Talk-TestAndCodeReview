@@ -16,7 +16,7 @@ div .disclamer {
 .code-with-class {
     display: flex;
     justify-content: space-between;
-
+    gap: 10px;
     .uml {
         max-width: 20vw;
         width: auto;
@@ -172,7 +172,7 @@ div .citation {
     }
 
     .before {
-        max-width: 20vw;
+        max-width: 18vw;
     }
     .after {
         max-width: 35vw;
@@ -194,13 +194,12 @@ div .citation {
 }
 
 .ut-archi-example {
-    p span {
-        color: var(--r-heading-color);
+    p {
+        font-size: 0.8em;
     }
 
-    .solo-img {
-        max-width: 40vw;
-        width: auto;
+    p span {
+        color: var(--r-heading-color);
     }
 }
 
@@ -217,6 +216,13 @@ div .citation {
         width: auto;
         height: auto;
     }
+}
+
+.solo-img {
+    max-width: 40vw;
+    max-height: 45vh;
+    width: auto;
+    height: auto;
 }
 
 // Overide global style

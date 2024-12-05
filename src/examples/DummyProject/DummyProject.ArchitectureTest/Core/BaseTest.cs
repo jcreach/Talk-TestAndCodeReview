@@ -1,3 +1,4 @@
+using DummyProject.Api.Controllers;
 using DummyProject.Bll;
 using DummyProject.Common.Core;
 using DummyProject.Dal;
@@ -8,7 +9,7 @@ namespace DummyProject.ArchitectureTest.Core;
 
 public abstract class BaseTest
 {
-    protected static readonly Assembly ApiAssembly = typeof(Program).Assembly;
+    protected static readonly Assembly ApiAssembly = typeof(WeatherForecastController).Assembly;
     protected static readonly Assembly BllAssembly = typeof(IDummyService).Assembly;
     protected static readonly Assembly DalAssembly = typeof(IDummyRepository).Assembly;
     protected static readonly Assembly CommonAssembly = typeof(Error).Assembly;

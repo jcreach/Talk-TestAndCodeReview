@@ -1,8 +1,9 @@
 using System;
+using DummyProject.Common.Core;
 
 namespace DummyProject.Common.Weather;
 
-public class WeatherForecast
+public class WeatherForecastEntity : Entity
 {
     public DateOnly Date { get; set; }
 

@@ -1,5 +1,7 @@
 using ArchUnitNET.Domain;
 using ArchUnitNET.Loader;
+using DummyProject.Bll;
+using Microsoft.AspNetCore.Mvc;
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
 namespace DummyProject.ArchitectureTest.Core;
@@ -33,4 +35,15 @@ public abstract class ArchitectureTestBed : BaseTest
         .That()
         .ResideInAssembly(DalAssembly)
         .As("Dal layer");
+
+
+    protected readonly IObjectProvider<Class> ServicesClasses = Classes()
+        .That()
+        .ImplementInterface(typeof(IDummyService))
+        .As("Services");
+
+    protected readonly IObjectProvider<Class> ControllersClasses = Classes()
+        .That()
+        .AreAssignableTo(typeof(ControllerBase))
+        .As("Controllers");
 }
