@@ -6,7 +6,7 @@ Aujourd'hui ce qu'on aimerait vous présenter c'est le cheminement qui nous perm
 
 ===
 
-#### Qu'est ce qu'on cherche à obtenir ? 
+#### Objectif : 
 
 - Gagner du temps <!-- .element: class="fragment fade-out" data-fragment-index="0" -->
 
