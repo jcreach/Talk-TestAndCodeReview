@@ -16,13 +16,13 @@ public class Result<T>
         Error = error;
         Value = value;
     }
-    
+
     private bool IsSuccess { get; }
     public T Value { get; }
-    
+
     public bool IsFailure => !IsSuccess;
     public Error Error { get; }
-    
+
     public static Result<T> Success(T data) => new(true, Error.None, data);
 
     public static Result<T> Failure(Error error) => new(false, error, default!);

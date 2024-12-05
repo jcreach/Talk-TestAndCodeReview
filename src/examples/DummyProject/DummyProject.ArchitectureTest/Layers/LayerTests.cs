@@ -41,7 +41,7 @@ public class LayerTests : ArchitectureTestBed
             .NotDependOnAny(DalLayer)
             .Check(Architecture);
     }
-    
+
     [Fact]
     public void DalLayer_Should_NotHaveDependencyOnApiLayer()
     {
@@ -52,7 +52,7 @@ public class LayerTests : ArchitectureTestBed
             .NotDependOnAny(ApiLayer)
             .Check(Architecture);
     }
-    
+
     [Fact]
     public void DalLayer_Should_NotHaveDependencyOnBllLayer()
     {
@@ -63,7 +63,7 @@ public class LayerTests : ArchitectureTestBed
             .NotDependOnAny(BllLayer)
             .Check(Architecture);
     }
-    
+
     [Fact]
     public void BllLayer_Should_NotHaveDependencyOnApiLayer()
     {

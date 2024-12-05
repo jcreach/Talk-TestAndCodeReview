@@ -4,6 +4,5 @@ namespace DummyProject.Common.Weather;
 
 public static class WeatherForecastErrors
 {
-    public static readonly Error OutOfWeekRange = new(
-        "WeatherForecastError.OutOfWeekRange", "Selected day is out of range.");
+    public static readonly Error OutOfWeekRange = new("WeatherForecastError.OutOfWeekRange", "Selected day is out of range.");
 }
