@@ -103,8 +103,7 @@
             <h2>Comment optimiser le process de code review ..?</h2>
             <aside class="notes" data-markdown>
               <textarea data-template>
-                La situtation
-                Aujourd'hui ce qu'on aimerait vous présenter c'est le cheminement qui nous permet actuellement de proposer un ensemble de solutions et d'outils pour optimiser nos code review sur nos projets client / interne ou bien personnels ...
+                Ce qu'on vous présente aujourd'hui c'est un peu le cheminement permet actuellement de proposer un ensemble de solutions et d'outils pour optimiser nos code review sur nos projets client / interne ou bien personnels ...
               </textarea>
             </aside>
           </section>
@@ -170,8 +169,11 @@
             <aside class="notes" data-markdown>
               <textarea data-template>
                 Pour remplirs nos objectifs on peut travailler sur : 
-                - La lisibilité du code, 
-                - La conformité du code aux standards
+                - La lisibilité du code, avec des outils comme CSharpier
+                - La conformité du code aux standards avec un linter
+
+                Ce sont des outils classique que l'on connait tous plus ou moins. On peut également traivailler sur :
+
                 - La péréntité du projet dans le temps
               </textarea>
             </aside>
@@ -185,10 +187,7 @@
             </ul>
             <aside class="notes" data-markdown>
               <textarea data-template>
-                Pour remplirs nos objectifs on peut travailler sur : 
-                - La lisibilité du code, 
-                - La conformité du code aux standards
-                - La péréntité du projet dans le temps
+                Dans la suite on va se concentrer sur la partie pérénité du code
               </textarea>
             </aside>
           </section>
@@ -242,7 +241,7 @@
 
             <aside class="notes" data-markdown>
               <textarea data-template>
-                Voici une définition :
+                Voici une définition (que j'ai mis beaucoup de temps à formuler...) :
 
                 *Lire définition* 
                 Merci wikipédia pour cette définiton :D 
@@ -298,6 +297,12 @@
                 </ul>
               </div>
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Ok, on veut tester l'architecture de notre projet, mais quelles sont les conditions pour que ça se passe bien?
+              </textarea>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Cas 1 - dépendances entre couches</h3>
@@ -308,6 +313,18 @@
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
               <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer.png" class="solo-img fragment" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Le postulat de départ est le suivant on aune brique common ...
+
+                Ici on a un test qui vient s'assurer que tous les types présents dans la couche Common ne dépendent pas de la couche Api d'ans notre exemple
+
+                Donc on définit une règle et après on vient faire une assertion, par rapport à notre architecture
+
+                Dans ce test on peut voir que j'ai abstrait des partie notamment la définition de la CommonLayer, de L'ApiLayer et de l'Architecture
+              </textarea>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Cas 1 - dépendances entre couches</h3>
@@ -319,6 +336,12 @@
                 <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass">
               </div>
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Dans une volontée d'avoir un exemple au plus proche de la réalité j'ai factorisé ça dans une classe mère que que j'ai appelé ArchitectureTestBed
+              </textarea>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Cas 1 - dépendances entre couches</h3>
@@ -330,6 +353,14 @@
                 <img src="./assets/img/ArchitectureTestBed_Archi.png" class="duo-img after" alt="Code test unitaire : ArchitectureTestBed_Archi">
               </div>
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Cette classe mère définit l'architecture a tester comme ça : 
+
+                On définit un ArchLoader qui charge les Assemblies nécessaires
+              </textarea>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Cas 1 - dépendances entre couches</h3>
@@ -341,6 +372,12 @@
                 <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
               </div>
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Cette classe définit également ce que sont les "Layers"
+              </textarea>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Cas 1 - dépendances entre couches</h3>
@@ -363,13 +400,33 @@
                 <img src="./assets/img/BaseTest.png" class="duo-img after" alt="Code test unitaire : BaseTest">
               </div>
             </div>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                L'ArchitectureTestBed hérite lui même d'un BaseTest
+
+                Alors ici le contenu du BaseTest peut clairement être mis directement dans le test bed.
+
+                là c'est une question de préférence personelle
+
+                Il contient la définitions des assembies. Ici j'ai choisi d'identifier un type en particulier qui ne devrait pas bouger dans mes couches, mais vous pouvez aussi charger les assemblies par leur nom avec de jolies constantes comme celles qui sont plus bas
+              </textarea>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Cas 1 - dépendances entre couches</h3>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
-              <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnOtherLayer.png" class="solo-img" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnOtherLayer">
+              <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnOtherLayer.png" class="solo-img fragment" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnOtherLayer">
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Et donc si on veut tester pleinnement notre cas et valider le postulat de départ il faudrait vu notre application faire à minima trois tests unitaires... 
+                
+                Et ça c'est pas très pratique... pas très propre
+                C'est à ce moment que le fait de passer par des variables intermédiaires au lieu de vérifier notre conditions directement va nous aider.
+              </textarea>
+            </aside>
           </section>
           <section>
             <h3>Cas 2 - construction des services</h3>
@@ -382,13 +439,45 @@
                 <img src="./assets/img/IDummyServices_Implementations_Should_EndByService.png" class="solo-img fragment">
               </div>
             </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Cette fois ci j'ai inversé un peu le sens de présentation des éléments, on va commencer par voir ce qu'est un service
+
+                On commence par tester que tous les services sont au bon endroit
+
+                Puis que les nouveaux services ne permettent pas l'héritage
+
+                et ensuite on termine en vérifiant le nomage de nos services
+              </textarea>
+            </aside>
           </section>
           <section>
             <h3>Cas 3 - entités</h3>
             <div class="ut-archi-example">
               <p><span class="underline">Postulat :</span> une entité doit hériter de la classe de base Entity et son nom doit terminer par "Entity"</p>
-              <img src="./assets/img/IDummyServices_Implementations_Should_EndByService.png" alt="Code test unitaire : IDummyServices_Implementations_Should_EndByService" class="solo-img">
-            </div>         
+              <img src="./assets/img/Entities_Should_Be_WellNamed_And_InheritFromEntityBaseClass.png" alt="Code test unitaire : Entities_Should_Be_WellNamed_And_InheritFromEntityBaseClass" class="solo-img">
+            </div>    
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                C'est un cas assez simple ici, on vient crée deux règles une qui vérifie que toutes les entités héritent bien de la classe Entity et une qui vérifie le nommage
+              </textarea>
+            </aside>     
+          </section>
+          <section>
+            <h3>Il ne manque plus que la CI non ? </h3>
+            <p class="fragment">Et un peu d'imagination / réflexion pour posser les bonnes règles</p>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Une fois qu'on a vu un peu les bases pour mettre en place des cas simples il ne manque plus que la Ci pour passer nos tests en automatique à chaque MR
+                
+                Et biensur un peu d'imagination et de réflexion pour adapter tout ça à votre projet.
+
+                Un petit détail avant de rendre la main à Alexandre, ici je n'ai montré que des cas simple, mais il est tout à fait possible d'écrire des selecteurs custom pour nos règles.
+                
+                Et même d'injecter un diagramme de classe au format plantuml pour valider directement notre architecture...
+              </textarea>
+            </aside>    
           </section>
         </section>
 
