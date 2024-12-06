@@ -1,0 +1,235 @@
+.reveal .slide-background-content {
+    background-image: url("../assets/img/logo-apside.png");
+    background-size: 5%;
+    background-position: left 50px bottom 50px;
+}
+
+div .disclamer {
+    font-style: italic;
+
+    span {
+        color: var(--r-heading-color);
+        text-decoration-line: underline;
+    }
+}
+
+.code-with-class {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    .uml {
+        max-width: 20vw;
+        width: auto;
+        height: auto;
+    }
+
+    .code {
+        max-width: 35vw;
+        width: auto;
+        height: auto;
+    }
+}
+
+div .citation {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+
+    background-image: url("../assets/img/logo-wikipedia.png");
+    background-size: 5%;
+    background-position: right 5px bottom 0px;
+    background-repeat: no-repeat; 
+}
+
+.text-highlight {
+    border: 5px solid var(--r-heading-color);
+    border-radius: 8px;
+    padding: {
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+    }
+}
+
+.speaker-preview {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    .speaker {
+        width: 20vw;
+        .speaker-avatar {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        
+        .speaker-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .speaker-name {
+                font-size: 3rem;
+            }
+
+            .speaker-role {
+                font-size: 1.8rem;
+                font-style: italic;
+            }
+
+            .speaker-compagny {
+                max-height: 55px;
+                margin: {
+                    top: 15px;
+                    bottom: 15px;
+                }
+
+                img {
+                    height: 50px;
+                    margin: unset;
+                }
+            }
+
+            .speaker-city {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.quick-summary-preview-container {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+
+    .quick-summary-preview {
+        width: 25vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            max-width: 300px;
+        }
+    }
+
+    .start {
+        height: 35vh;
+        width: 20vw;
+    }
+
+    .middle {
+        width: 20vw;
+    }
+
+    .end {
+        img {
+            max-width: 250px;
+        }
+    }
+}
+
+.img-evolution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .img-evolution-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 35vh;
+        height: auto;
+
+        > .duo-img-vertical, .icon  {
+            margin: unset;
+        }
+    }
+
+    .icon {
+        max-width: 50px !important;
+        max-height: 50px !important;
+        width: auto;
+        height: auto;
+    }
+
+    .duo-img {
+        max-width: 25vw;
+        width: auto;
+    }
+
+    .duo-img-vertical {
+        max-height: 15vw;
+        height: auto;
+        // margin: unset;
+    }
+
+    .trio-img {
+        max-width: 20vw;
+        width: auto;
+    }
+
+    .before {
+        max-width: 18vw;
+    }
+    .after {
+        max-width: 35vw;
+    }
+}
+
+
+.ut-conditions {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    .ut-schema {
+        max-width: 200px;
+        max-height: 250px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.ut-archi-example {
+    p {
+        font-size: 0.8em;
+    }
+
+    p span {
+        color: var(--r-heading-color);
+    }
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.logos {
+    display: flex;
+
+    img {
+        max-width: 150px;
+        max-height: 50px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.solo-img {
+    max-width: 40vw;
+    max-height: 45vh;
+    width: auto;
+    height: auto;
+}
+
+// Overide global style
+:root {
+    --r-background-color: #f0f0ef;
+    --r-main-color: #787878;
+    --r-heading-color: #e79759;
+    --r-link-color: #153650;
+    --r-main-color: #153650;
+}

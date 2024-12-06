@@ -1,0 +1,76 @@
+@startuml
+Api <-- Bll
+Api <-- Common
+Bll <-- Dal
+Bll <-- Common
+
+package Api {
+    class ControllerBase
+        namespace Controllers {
+            ControllerBase <|-- WeatherForecastController
+            class WeatherForecastController {
+                -ILogger<WeatherForecastController> _logger
+                -WeatherForecastDummyService _weatherForecastDummyService
+            }
+        }
+}
+
+package Bll {
+    interface IDummyServices {
+        string Name
+    }
+    namespace Implts {
+    IDummyService <|-- WeatherForecastDummyService
+    class WeatherForecastDummyService {
+        -ILogger _logger
+        -string[] _summaries
+        +string Name
+        +IEnumerable<WeatherForecast> GetWeatherForecast()
+        +Result<WeatherForecast> GetWeatherForecastByDayOfWeek(DaysOfWeek dayOfWeek)
+    }
+    }
+}
+
+package Dal {
+
+}
+
+package Common {
+    namespace Core {
+        Result o-- Error
+
+        class Error {
+            {static} Error None
+        }
+
+        class Result<T> {
+            __ Public properties __
+            +bool IsSuccess
+            +bool IsFailure
+            +T Value
+            +Error Error
+            __ Constructors __
+            -Result(bool isSuccess, Error error, T value)
+            __ Methods __
+            +{static}Result<T> Success(T data)
+            +{static}Result<T> Failure(Error error)
+        }
+    }
+    enum DaysOfWeek
+
+    namespace Weather {
+        class WeatherForecast {
+            +DateOnly Date
+            +int TemperatureC
+            +int TemperatureF
+            +string? Summary
+        }
+
+        WeatherForecastErrors o-- Error
+
+        class WeatherForecastErrors {
+            +{static}Error OutOfWeekRange
+        }
+    }
+}
+@enduml

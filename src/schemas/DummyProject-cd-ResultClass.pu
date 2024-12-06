@@ -1,0 +1,15 @@
+@startuml
+title DummyProject.Common
+class Result<T> {
+    __ Public properties __
+    +bool IsSuccess
+    +bool IsFailure
+    +T Value
+    +Error Error
+    __ Constructors __
+    -Result(bool isSuccess, Error error, T value)
+    __ Methods __
+    +{static}Result<T> Success(T data)
+    +{static}Result<T> Failure(Error error)
+}
+@enduml

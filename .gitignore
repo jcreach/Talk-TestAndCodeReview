@@ -7,7 +7,7 @@
 **/pnpm-debug.log*
 **/lerna-debug.log*
 
-node_modules
+**/node_modules
 **/dist
 **/dist-ssr
 *.local
@@ -20,5 +20,10 @@ node_modules
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
+
+**/*.user
+**/bin
+**/obj
+**/.vs
+**/out

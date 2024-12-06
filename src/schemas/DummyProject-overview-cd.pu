@@ -1,0 +1,76 @@
+@startuml
+skinparam packageStyle rectangle
+Common -up-> Api
+Common -right-> Bll
+Bll -up-> Api
+Bll <-down- Dal
+
+package Api {}
+package Bll {}
+package Dal {}
+package Common {}
+@enduml
+
+@startuml
+skinparam packageStyle rectangle
+title DummyProject
+Common -up-> Api
+Common -right-> Bll
+Common --> Dal
+Bll -up-> Api
+Bll <-down- Dal
+
+package Api {}
+package Bll {}
+package Dal {}
+package Common {
+    class Result<T>
+}
+@enduml
+
+@startuml
+skinparam packageStyle rectangle
+title DummyProject
+Common -up-> Api
+Common -right-> Bll
+Common --> Dal
+Bll -up-> Api
+Bll <-down- Dal
+
+package Api {}
+package Bll {}
+package Dal {}
+package Common #palegreen {}
+@enduml
+
+@startuml
+skinparam packageStyle rectangle
+title DummyProject
+Common -up-> Api
+Common -right-> Bll
+Common --> Dal
+Bll -up-> Api
+Bll <-down- Dal
+
+package Api #palegreen {}
+package Bll #palegreen {}
+package Dal #palegreen {}
+package Common #palegreen {}
+@enduml
+
+@startuml
+skinparam packageStyle rectangle
+title DummyProject
+Common -up-> Api
+Common -up-> Bll
+Common -up-> Dal
+Bll -right-> Api
+Bll <-left- Dal
+
+package Api {}
+package Bll {}
+package Dal {}
+package Common {
+    class Result<T>
+}
+@enduml

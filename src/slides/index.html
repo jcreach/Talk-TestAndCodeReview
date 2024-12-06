@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/solarized.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test et code review</title>
+  </head>
+  
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="assets/md/tittle.md"
+        data-separator-notes="^Note:">
+        </section>
+        
+        <!-- Qui sommes-nous ? -->
+        <section>
+          <section data-auto-animate>
+            <h2>Qui sommes nous ?</h2>
+          </section>
+          <section data-auto-animate>
+            <h3>Qui sommes nous ?</h3>
+            <div class="speaker-preview">
+              <div class="speaker">
+                <img class="speaker-avatar" src="./assets/img/jdcsc.jpg" alt="Julien Creach" />
+                <div class="speaker-details">
+                  <span class="speaker-name">Julien Creach</span>
+                  <span class="speaker-role">Tech lead C# dotnet</span>
+                  <div class="speaker-compagny">
+                    <img src="./assets/img/logo-apside.png" alt="Apside" />
+                  </div>
+                  <span class="speaker-city">🏙️ Rennes</span>
+                </div>
+              </div>
+              <div class="speaker">
+                <img class="speaker-avatar" src="./assets/img/aru.jpg" alt="Alexandre Ruiz" />
+                <div class="speaker-details">
+                  <span class="speaker-name">Alexandre Ruiz</span>
+                  <span class="speaker-role">Tech lead C# dotnet</span>
+                  <div class="speaker-compagny">
+                    <img src="./assets/img/logo-apside.png" alt="Apside" />
+                  </div>
+                  <span class="speaker-city">🏙️ Clermont-Ferrand</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Mise en situation -->
+        <section>
+          <section data-auto-animate>
+            <h2>Mise en situation</h2>
+          </section>
+          <section data-auto-animate>
+            <h3>Mise en situation</h3>
+            <div class="disclamer">
+              <p>
+                <span>Disclaimer :</span> Cette mise en situation est imaginaire.<br />
+                Les personnes et les événements figurant dans cette présentation sont purement ficitfs.
+                <span class="fragment" >ou presque ...</span>
+              </p>
+            </div>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Afin de poser le contexte de notre présentation, nous souhaitions vous proposer une petite mise en situation.
+  
+                Avant de passer à celle ci, merci de prendre connaissance de ce disclaimer :
+              </textarea>
+            </aside>
+          </section>
+          
+          <section>
+            <h3>L'équipe</h3>
+            <ul>
+              <li class="fragment">1 "feu" archi logiciel</li>
+              <li class="fragment">1 lead-dev francophone</li>
+              <li class="fragment">des devs juniors anglophones</li>
+            </ul>
+
+            <aside class="notes" data-markdown>
+            </aside>
+          </section>
+          
+          <section>
+            <h3>Le contexte</h3>
+            <ul>
+              <li class="fragment">Multilangues</li>
+              <li class="fragment">La doc c'est le code</li>
+              <li class="fragment">Des merges requests quotidiennes</li>
+            </ul>
+
+            <aside class="notes" data-markdown>
+            </aside>
+          </section>
+        </section>
+
+        <!-- Comment optimiser le process de code review ..? -->
+        <section>
+          <section>
+            <h2>Comment optimiser le process de code review ..?</h2>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Ce qu'on vous présente aujourd'hui c'est un peu le cheminement permet actuellement de proposer un ensemble de solutions et d'outils pour optimiser nos code review sur nos projets client / interne ou bien personnels ...
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Objectif : </h3>
+            <div class="quick-summary-preview-container">
+              <div class="quick-summary-preview start">
+                <span>Gagner du temps</span>
+                <img src="assets/img/asap.jpg" class="fragment">
+              </div>
+            </div>
+
+            <aside class="notes">
+              Quand on parle d'optimiser notre process de code review, on cherche : A gagner du temps, afin de pouvoir livrer des fonctionnalités plus rapidement ou encore tout simple libérer du temps de cerveau afin de pouvoir se concentrer sur ses propres développements. Tout ça sans dégrader la qualité de ce qu'on livre
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Objectif : </h3>
+            <div class="quick-summary-preview-container">
+              <div class="quick-summary-preview middle">
+                <span>Gagner du temps</span>
+                <img src="assets/img/asap.jpg">
+              </div>
+              <div class="quick-summary-preview middle">
+                <span>Fluidifier la communication</span>
+                <img src="assets/img/chabal.jpg" class="fragment">
+              </div>
+            </div>
+
+            <aside class="notes">
+              On cherche également à fludifier et à simplifier la communication, afin d'éviter les incompréhensions et les aller-retours chronophages. Si on rajoute en plus un contexte multi site et multi langues
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Objectif : </h3>
+            <div class="quick-summary-preview-container">
+              <div class="quick-summary-preview end">
+                <span>Gagner du temps</span>
+                <img src="assets/img/asap.jpg">
+              </div>
+              <div class="quick-summary-preview end">
+                <span>Fluidifier la communication</span>
+                <img src="assets/img/chabal.jpg">
+              </div>
+              <div class="quick-summary-preview end">
+                <span>Focaliser sur la valeur ajouter</span>
+                <img src="assets/img/sparrow.jpg" class="fragment">
+              </div>
+            </div>
+
+            <aside class="notes">
+              Mais aussi à recentrer le travail de code review sur la substance et non sur la forme.
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Quels axes ?</h3>
+
+            <ul>
+              <li class="fragment">Lisibilité du code</li>
+              <li class="fragment">Conformité du code aux standards</li>
+              <li class="fragment">Pérénité du code et de l'architecture du projet dans le temps</li>
+            </ul>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Pour remplirs nos objectifs on peut travailler sur : 
+                - La lisibilité du code, avec des outils comme CSharpier
+                - La conformité du code aux standards avec un linter
+
+                Ce sont des outils classique que l'on connait tous plus ou moins. On peut également traivailler sur :
+
+                - La péréntité du projet dans le temps
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Quels axes ?</h3>
+            <ul>
+              <li>Lisibilité du code</li>
+              <li>Conformité du code aux standards</li>
+              <li class="text-highlight">Pérénité du code et de l'architecture du projet dans le temps</li>
+            </ul>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Dans la suite on va se concentrer sur la partie pérénité du code
+              </textarea>
+            </aside>
+          </section>
+        </section>
+
+        <!-- Et si on utilisait des tests unitaires ? -->
+        <section>
+          <section data-auto-animate>
+            <h2>Et si on utilisait des tests unitaires ?</h2>
+          </section>
+          <section data-auto-animate>
+            <h3>Les tests unitaires késako ?</h3>
+            <div class="code-with-class">
+              <img class="uml" src="./assets/img/DummyProject-cd-ResultClass.svg" alt=""/>
+              <img class="code" src="./assets/img/unitTest-classic.png" alt="Exemple d'un test unitaire"/>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                - Je sais pas vous mais moi quand on me parle de test unitaire je pense à quelque chose comme ça.
+                
+                La c'est un test tout simple qui vient controler une méthode d'une classe.. Comme ici la classe **Result** qui est une classe générique servant à normer les retours produits par mes services.
+                Et la quand on voit cet exemple je me dis **ok** les TU je sais faire, (dans le meilleur des mondes il y en a déjà), c'est pratique, mais je vois pas comment on va garantir la pérénité de notre architecture avec ça...
+
+                - Pour y voir un peu plus clair il faut revenir aux bases. 
+                
+                Est ce que vous avez les bases ? Oui ? non ? 
+              
+                Ok instant litérature :
+              </textarea>
+            </aside>
+          </section>
+          <section>
+            <h3>Les tests unitaires késako ?</h3>
+            <div class="citation r-stack">
+              <p class="fragment fade-out"
+              data-fragment-index="0">
+                En programmation informatique, le test unitaire [...] 
+                est une procédure permettant de vérifier le bon fonctionnement
+                d'une partie précise d'un logiciel ou d'une portion d'un programme 
+                (appelée « unité » ou « module »).
+              </p>
+              <p class="fragment current-visible"
+              data-fragment-index="0">
+                En programmation informatique, le test unitaire [...] 
+                est une procédure permettant de vérifier le bon fonctionnement
+                d'une <span class="text-highlight">partie précise d'un logiciel</span>ou d'une portion d'un programme 
+                (appelée « unité » ou « module »).
+              </p>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Voici une définition (que j'ai mis beaucoup de temps à formuler...) :
+
+                *Lire définition* 
+                Merci wikipédia pour cette définiton :D 
+
+                L'information importante à retenir ici est "une partie précise d'un logiciel" dans notre exemple la partie en question est :
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Une partie précise d'un logiciel ?</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Une partie précise d'un logiciel ?</h3>
+            <div class="img-evolution">
+              <img src="./assets/img/DummyProject-overview-cd-1.svg" alt="diagramme de classe zoom in sur la classe Result">
+              <img src="./assets/img/right-arrow.png" alt="flèche droite" class="icon fragment" data-fragment-index="1">
+              <img src="./assets/img/DummyProject-overview-cd-2.svg" alt="diagramme de classe zoom out sur le projet Common" class="fragment" data-fragment-index="1">
+              <img src="./assets/img/right-arrow.png" alt="flèche droite" class="icon fragment" data-fragment-index="2">
+              <img src="./assets/img/DummyProject-overview-cd-3.svg" alt="diagramme de classe zoom out sur le projet global" class="fragment" data-fragment-index="2">
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                La classe générique Résult dans la brique common.
+
+                Mais est-ce que ça ne pourrait pas être le projet Common ? Ou alors toutes les briques de notre projet ?
+
+                Et si la partie de notre logiciel à tester n'était plus du code mais l'architecture de notre projet.
+              </textarea>
+            </aside>
+          </section>
+          <section>
+            <h3>Et l'architecture de notre code ?</h3>
+            <div class="ut-conditions">
+              <img class="ut-schema" src="./assets/img/DummyProject-overview-cd-3.svg" alt="">
+              <div>
+                <p class="underline">Conditions :</p>
+                <ul>
+                  <li class="fragment">
+                    Un langage permettant la réflexion
+                    <div class="logos">
+                      <img src="./assets/img/logo-csharp.png">
+                      <img src="./assets/img/logo-dotnet.svg">
+                    </div>
+                  </li>
+                  <li class="fragment">
+                    Une librairie permettant d'abstraire la partie réflexion
+                    <div class="logos">
+                      <img src="./assets/img/logo-ArchUnitNET.png">
+                    </div>
+                  </li>
+                  <li class="fragment">Une bonne connaisance de l'architecture du projet</li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Ok, on veut tester l'architecture de notre projet, mais quelles sont les conditions pour que ça se passe bien?
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer.png" class="solo-img fragment" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Le postulat de départ est le suivant on aune brique common ...
+
+                Ici on a un test qui vient s'assurer que tous les types présents dans la couche Common ne dépendent pas de la couche Api d'ans notre exemple
+
+                Donc on définit une règle et après on vient faire une assertion, par rapport à notre architecture
+
+                Dans ce test on peut voir que j'ai abstrait des partie notamment la définition de la CommonLayer, de L'ApiLayer et de l'Architecture
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <div class="img-evolution">
+                <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="flèche">
+                <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass">
+              </div>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Dans une volontée d'avoir un exemple au plus proche de la réalité j'ai factorisé ça dans une classe mère que que j'ai appelé ArchitectureTestBed
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <div class="img-evolution">
+                <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="flèche">
+                <img src="./assets/img/ArchitectureTestBed_Archi.png" class="duo-img after" alt="Code test unitaire : ArchitectureTestBed_Archi">
+              </div>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Cette classe mère définit l'architecture a tester comme ça : 
+
+                On définit un ArchLoader qui charge les Assemblies nécessaires
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <div class="img-evolution">
+                <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="flèche">
+                <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer.png" class="duo-img after" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer">
+              </div>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Cette classe définit également ce que sont les "Layers"
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <div class="img-evolution">
+                <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass.png" class="duo-img before" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnApiLayer_WithClass">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="flèche">
+                <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer_ApiLayer.png" class="duo-img after" alt="Code test unitaire : ArchitectureTestBed_Archi_CommonLayer_ApiLayer">
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <div class="img-evolution">
+                <img src="./assets/img/ArchitectureTestBed_Archi_CommonLayer_ApiLayer_BaseTest.png" class="duo-img before" alt="Code test unitaire : ArchitectureTestBed_Archi_CommonLayer_ApiLayer_BaseTest">
+                <img src="./assets/img/right-arrow.png" class="icon" alt="flèche">
+                <img src="./assets/img/BaseTest.png" class="duo-img after" alt="Code test unitaire : BaseTest">
+              </div>
+            </div>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                L'ArchitectureTestBed hérite lui même d'un BaseTest
+
+                Alors ici le contenu du BaseTest peut clairement être mis directement dans le test bed.
+
+                là c'est une question de préférence personelle
+
+                Il contient la définitions des assembies. Ici j'ai choisi d'identifier un type en particulier qui ne devrait pas bouger dans mes couches, mais vous pouvez aussi charger les assemblies par leur nom avec de jolies constantes comme celles qui sont plus bas
+              </textarea>
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Cas 1 - dépendances entre couches</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Common doit être autonome vis à vis des autres couches</p>
+              <img src="./assets/img/CommonLayer_Should_NotHaveDependencyOnOtherLayer.png" class="solo-img fragment" alt="Code test unitaire : CommonLayer_Should_NotHaveDependencyOnOtherLayer">
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Et donc si on veut tester pleinnement notre cas et valider le postulat de départ il faudrait vu notre application faire à minima trois tests unitaires... 
+                
+                Et ça c'est pas très pratique... pas très propre
+                C'est à ce moment que le fait de passer par des variables intermédiaires au lieu de vérifier notre conditions directement va nous aider.
+              </textarea>
+            </aside>
+          </section>
+          <section>
+            <h3>Cas 2 - construction des services</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> Un service applicatif doit être dans la couche Bll, il ne doit pas pouvoir être hérité et son nom doit terminer par "Service"</p>
+              <div class="r-stack">
+                <img src="./assets/img/ArchitectureTestBed_ServicesClasses.png" class="solo-img fragment fade-out" data-fragment-index="0">
+                <img src="./assets/img/Services_Should_BeInCorrectLayer.png" class="solo-img fragment current-visible" data-fragment-index="0">
+                <img src="./assets/img/Services_Should_BeSealed.png" class="solo-img fragment current-visible" data-fragment-index="1">
+                <img src="./assets/img/IDummyServices_Implementations_Should_EndByService.png" class="solo-img fragment">
+              </div>
+            </div>
+
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Cette fois ci j'ai inversé un peu le sens de présentation des éléments, on va commencer par voir ce qu'est un service
+
+                On commence par tester que tous les services sont au bon endroit
+
+                Puis que les nouveaux services ne permettent pas l'héritage
+
+                et ensuite on termine en vérifiant le nomage de nos services
+              </textarea>
+            </aside>
+          </section>
+          <section>
+            <h3>Cas 3 - entités</h3>
+            <div class="ut-archi-example">
+              <p><span class="underline">Postulat :</span> une entité doit hériter de la classe de base Entity et son nom doit terminer par "Entity"</p>
+              <img src="./assets/img/Entities_Should_Be_WellNamed_And_InheritFromEntityBaseClass.png" alt="Code test unitaire : Entities_Should_Be_WellNamed_And_InheritFromEntityBaseClass" class="solo-img">
+            </div>    
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                C'est un cas assez simple ici, on vient crée deux règles une qui vérifie que toutes les entités héritent bien de la classe Entity et une qui vérifie le nommage
+              </textarea>
+            </aside>     
+          </section>
+          <section>
+            <h3>Il ne manque plus que la CI non ? </h3>
+            <p class="fragment">Et un peu d'imagination / réflexion pour posser les bonnes règles</p>
+            <aside class="notes" data-markdown>
+              <textarea data-template>
+                Une fois qu'on a vu un peu les bases pour mettre en place des cas simples il ne manque plus que la Ci pour passer nos tests en automatique à chaque MR
+                
+                Et biensur un peu d'imagination et de réflexion pour adapter tout ça à votre projet.
+
+                Un petit détail avant de rendre la main à Alexandre, ici je n'ai montré que des cas simple, mais il est tout à fait possible d'écrire des selecteurs custom pour nos règles.
+                
+                Et même d'injecter un diagramme de classe au format plantuml pour valider directement notre architecture...
+              </textarea>
+            </aside>    
+          </section>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+          <section data-auto-animate>
+            <h2>Conclusion !</h2>
+          </section>
+          <section data-auto-animate>
+            <h3>Conclusion !</h3>
+            <ul>
+              <li>S'adapte à toutes les tailles d'équipe</li>
+              <li class="fragment">Garantie l'architecture logiciel</li>
+              <li class="fragment">Ne remplace pas un linter</li>
+              <li class="fragment disclamer">Ni la review, <span class="fragment" >mais la valorise !</span></li>
+            </ul>
+          </section>
+        </section>
+
+
+        <!-- Merci -->
+        <section>
+          <h3>Merci !</h3>
+          <div class="img-evolution">
+            <div class="quick-summary-preview-container">
+              <div class="quick-summary-preview start">
+                <span>Github</span>
+                <img src="./assets/img/logo-github.png" alt="QR code Github" width="300px" />
+              </div>
+            </div>
+            
+            <div class="quick-summary-preview-container">
+              <div class="quick-summary-preview start">
+                <span>Feedback</span>
+                <img src="./assets/img/logo-feedback.png" alt="QR code feedback" />
+              </div>
+            </div>
+                    
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
