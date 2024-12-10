@@ -1,6 +1,6 @@
 .reveal .slide-background-content {
     background-image: url("../assets/img/logo-apside.png");
-    background-size: 5%;
+    background-size: 7%;
     background-position: left 50px bottom 50px;
 }
 
@@ -221,6 +221,13 @@ div .citation {
 .solo-img {
     max-width: 40vw;
     max-height: 45vh;
+    width: auto;
+    height: auto;
+}
+
+.big-img {
+    max-width: 40vw;
+    max-height: 38vh !important;
     width: auto;
     height: auto;
 }
