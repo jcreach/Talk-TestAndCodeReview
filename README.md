@@ -1,5 +1,16 @@
 # Et si les tests unitaires faisaient la revue de code à notre place ?
 
+## References
+
+### DevFest Dijon 2024
+
+Ce talk a été donné pour la première fois à DevFest Dijon 2024 sous le format 20min.<br/>
+Vous pouvez consulter les feedbacks via ce lien : https://openfeedback.io/devfest-dijon-2024/2024-12-06/QoZ4JS9ZBdurr0cJ6QQF
+
+## Slides
+
+Les slides sont accessibles dans le dossier `src\slides` et ont été réalisés via `reveal.js`.
+
 ## Plan
 
 ### Qui sommes-nous ?
