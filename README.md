@@ -9,7 +9,7 @@ Vous pouvez consulter les feedbacks via ce lien : https://openfeedback.io/devfes
 
 ## Slides
 
-Les slides sont accessibles dans le dossier `src\slides` et ont été réalisés via `reveal.js`.
+Les slides pour le format court sont accessibles dans le dossier `src\slides` et ont été réalisés via `reveal.js`.
 
 ## Plan
 
