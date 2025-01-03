@@ -1,0 +1,10 @@
+/::
+custom_css: custom.css
+::/
+
+# Et si les tests unitaires faisaient la revue de code à votre place ?
+
+!include(./slides/speakers.sdf)
+!include(./slides/role-play.sdf)
+!include(./slides/how-to-optimize.sdf)
+!include(./slides/unit-tests.sdf)

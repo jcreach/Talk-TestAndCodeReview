@@ -1,0 +1,51 @@
+:root {
+    --sd-background-color: #f0f0ef;
+    --sd-heading-color: #e79759;
+    --sd-text-color: #153650;
+    --sd-primary-color: tomato;
+}
+
+.sd-slide::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/logo/logo-apside.png);
+    background-position: left 2vw bottom 2vh;
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    opacity: 1;
+    z-index: -1;
+}
+
+.sd-slide::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/logo/logo-devfest-dijon.webp);
+    background-position: right 2vw bottom 2vh;
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    opacity: 1;
+    z-index: -1;
+}
+
+.split .content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.split .content > div {
+    width: 50%;
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
