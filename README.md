@@ -6,6 +6,7 @@
 
 Ce talk a été donné pour la première fois à DevFest Dijon 2024 sous le format 20min.<br/>
 Vous pouvez consulter les feedbacks via ce lien : https://openfeedback.io/devfest-dijon-2024/2024-12-06/QoZ4JS9ZBdurr0cJ6QQF
+Vous pouvez retrouver la rediffusion ici : https://www.youtube.com/watch?v=uhxPxDogRkM
 
 ## Slides
 
